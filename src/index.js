@@ -13,7 +13,6 @@ const openBrs = ['(', '{', '|', '['];
 
 module.exports = function check(str, bracketsConfig) {
 
-//function check() {
   let stack = [];
 
   for (let i = 0; i < str.length; i++) {
@@ -34,8 +33,6 @@ module.exports = function check(str, bracketsConfig) {
       
     }
   }
-//console.log(stack);
-  return stack.length === 0;
+  return stack.length % 2 === 0;
 };
 
-//check (str);
